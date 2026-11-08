@@ -1,0 +1,124 @@
+/* Темний фоновий градієнт та стиль сторінки */
+body { 
+    font-family: 'Segoe UI', system-ui, sans-serif; 
+    margin: 0;
+    padding: 25px;
+    background: #0d0f12;
+    color: #e1e7ed;
+}
+
+/* Стильний заголовок */
+h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    margin-top: 0;
+}
+
+/* Меню з соковитим неоновим ховером */
+.menu {
+    list-style: none; /* Прибираємо маркери */
+    padding: 0;
+    margin: 20px 0;
+    display: flex;    /* Вистроюємо в рядок */
+    gap: 12px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 22px;
+    background: #1a1f26;
+    border: 1px solid #2d3542;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    display: inline-block;
+}
+
+/* Ховер зі світінням */
+.menu a:hover {
+    background: #ff3b30;
+    border-color: #ff3b30;
+    box-shadow: 0 0 15px rgba(255, 59, 48, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Клік по кнопці */
+.menu a:active {
+    transform: translateY(1px);
+    box-shadow: 0 0 5px rgba(255, 59, 48, 0.3);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #232a35;
+    margin: 25px 0;
+}
+
+/* Картки 2 колонок у стилі Dark Mode */
+.content { 
+    display: flex; 
+    gap: 25px; 
+}
+
+.sidebar { 
+    width: 28%; 
+    background: #151921;
+    border: 1px solid #232a35;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    height: fit-content;
+}
+
+.main { 
+    width: 72%; 
+    background: #151921;
+    border: 1px solid #232a35;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+/* Фото з темним ефектом */
+img { 
+    max-width: 100%; 
+    border-radius: 10px;
+    margin: 15px 0;
+    border: 1px solid #2d3542;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+/* Таблиця */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #ff3b30;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 15px;
+    font-weight: 700;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #232a35;
+}
+
+tr:nth-child(even) {
+    background-color: #1a1f26;
+}
+
+/* Підвал */
+body > p:last-child {
+    font-size: 0.9em;
+    color: #8b98a5;
+    margin-top: 35px;
+}

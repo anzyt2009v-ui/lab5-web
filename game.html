@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Міні-гра JS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #zone {
+            width: 100%;
+            height: 250px;
+            background: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+        #target {
+            font-size: 40px;
+            position: absolute;
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"><h1>POWER GYM — Гра</h1></div>
+    <div id="nav">
+        <ul>
+             <li><a href="index.html">Головна</a></li>
+            <li><a href="schedule.html">Графік</a></li>
+            <li><a href="price.html">Ціни</a></li>
+            <li><a href="animation.html">Анімація JS</a></li>
+            <li><a href="game.html">Міні-гра JS</a></li>
+        </ul>
+    </div>
+
+    <div id="container">
+        <div id="main-content">
+            <h2>Спіймай гантелю! Рахунок: <span id="score">0</span></h2>
+            <div id="zone">
+                <div id="target" onclick="catchMe()">🏋️‍♂️</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let score = 0;
+
+        function catchMe() {
+            score++;
+            document.getElementById('score').innerText = score;
+            
+            let x = Math.floor(Math.random() * 200);
+            let y = Math.floor(Math.random() * 180);
+            
+            let item = document.getElementById('target');
+            item.style.left = x + 'px';
+            item.style.top = y + 'px';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Анімація JS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #box {
+            width: 80px;
+            height: 80px;
+            background: #e74c3c;
+            margin: 20px auto;
+            position: relative;
+            left: 0;
+        }
+        .btns { text-align: center; margin-top: 10px; }
+        .btns button { padding: 8px 15px; margin: 2px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div id="header"><h1>POWER GYM — Анімація</h1></div>
+    <div id="nav">
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="schedule.html">Графік</a></li>
+            <li><a href="price.html">Ціни</a></li>
+            <li><a href="animation.html">Анімація JS</a></li>
+            <li><a href="game.html">Міні-гра JS</a></li>
+        </ul>
+    </div>
+
+    <div id="container">
+        <div id="main-content">
+            <h2>Проста анімація</h2>
+            <div id="box"></div>
+            <div class="btns
+                <button onclick="start()">Старт</button>
+                <button onclick="stop()">Стоп</button>
+                <button onclick="reset()">Скинути</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let box = document.getElementById('box');
+        let pos = 0;
+        let timer = null;
+
+        function start() {
+            if (!timer) {
+                timer = setInterval(() => {
+                    pos += 5;
+                    box.style.left = pos + 'px';
+                }, 30);
+            }
+        }
+
+        function stop() {
+            clearInterval(timer);
+            timer = null;
+        }
+
+        function reset() {
+            stop();
+            pos = 0;
+            box.style.left = '0px';
+        }
+    </script>
+</body>
+</html>
